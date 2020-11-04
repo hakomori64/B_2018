@@ -20,15 +20,35 @@ router.get('/home', function(req, res, next){
 });
 
 router.get('/status', function(req, res, next){
+  /*connection.query(
+    'SELECT * FROM users WHERE id = ?',
+    [req.params.id],
+    (error, results) => {
+      res.render('status.ejs', {user: results});
+    }
+  );*/
   res.render('status');
 });
 
 router.get('/search', function(req, res){
+  /*connection.query(
+    'SELECT * FROM recipes',
+    (error, results) => {
+      res.render('search.ejs', {recipes: results});
+    }
+  );*/
   res.render('search');
 });
 
 router.get('/menu/:id', function(req, res){
-  console.log(req.params.id);
+  /*console.log(req.params.id);
+  connection.query(
+    'SELECT * FROM recipes WHERE id = ?',
+    [req.params.id],
+    (error, results) => {
+      res.render('/menu.ejs', {recipe: results});
+    }
+  );*/
   res.render('menu');
 });
 
