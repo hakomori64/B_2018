@@ -8,6 +8,8 @@
   </head>
   <body>
     <header>
+      <!-- partial -->
+      <%- include('header.ejs') %>
     </header>
     <div class="container">
       <div class="titlearea">
@@ -15,18 +17,7 @@
       </div>
       <div class="index-table-wrapper">
         <ul class="table-body">
-          <% recipes.forEach((recipe) => { %>
-            <li>
-              <table>
-                <td>
-                  <%= recipe.name %>
-                </td> 
-                <td>
-                  <%= recipe.desc %>
-                </td>
-              </table>
-            </li>
-          <% }) %>
+
         </ul>
       </div>
     </div>
